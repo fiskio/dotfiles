@@ -8,3 +8,4 @@
 
 - shell:
    - [git submodule update --init --recursive, Installing/updating submodules]
+   - [fonts/install.sh, Installing PowerLine fonts]
