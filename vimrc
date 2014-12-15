@@ -106,3 +106,6 @@ map <leader>y :CtrlPBuffer<cr>s
 
 set t_Co=256
 set t_ut=
+
+"Show line numbers
+set number
