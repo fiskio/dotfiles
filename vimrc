@@ -21,34 +21,34 @@ Plugin 'rking/ag.vim'
 Plugin 'flazz/vim-colorschemes'
 
 "Thematic
-"Plugin 'git@github.com:reedes/vim-thematic.git'
+"Plugin 'reedes/vim-thematic.git'
 
 "Airline
-Plugin 'git@github.com:bling/vim-airline.git'
+Plugin 'bling/vim-airline.git'
 
 "Lua-Support-2
-Plugin 'git@github.com:WolfgangMehner/lua-support.git'
+Plugin 'WolfgangMehner/lua-support.git'
 
 "Bad white-space
-Plugin 'git@github.com:bitc/vim-bad-whitespace.git'
+Plugin 'bitc/vim-bad-whitespace.git'
 
 "NerdCommenter
-Plugin 'git@github.com:scrooloose/nerdcommenter.git'
+Plugin 'scrooloose/nerdcommenter.git'
 
 "Fugitive
-Plugin 'git@github.com:tpope/vim-fugitive.git'
+Plugin 'tpope/vim-fugitive.git'
 
 "Startify
-Plugin 'git@github.com:mhinz/vim-startify.git'
+Plugin 'mhinz/vim-startify.git'
 
 "Syntastic
-Plugin 'git@github.com:scrooloose/syntastic.git'
+Plugin 'scrooloose/syntastic.git'
 
 "VimTmuxNavigator
-Plugin 'git@github.com:christoomey/vim-tmux-navigator.git'
+Plugin 'christoomey/vim-tmux-navigator.git'
 
 "NerdTree
-Plugin 'git@github.com:scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdtree.git'
 
 "TmuxLine
 Plugin 'edkolev/tmuxline.vim'
