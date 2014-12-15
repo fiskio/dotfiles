@@ -8,4 +8,3 @@
 
 - shell:
    - [git submodule update --init --recursive, Installing/updating submodules]
-   - [vim +PluginInstall +qall, Installing Vim plugins]
