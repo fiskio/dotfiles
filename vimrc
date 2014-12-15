@@ -50,6 +50,9 @@ Plugin 'git@github.com:christoomey/vim-tmux-navigator.git'
 "NerdTree
 Plugin 'git@github.com:scrooloose/nerdtree.git'
 
+"TmuxLine
+Plugin 'edkolev/tmuxline.vim'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
