@@ -53,6 +53,9 @@ Plugin 'scrooloose/nerdtree.git'
 "TmuxLine
 Plugin 'edkolev/tmuxline.vim'
 
+"GitGutter
+Plugin 'airblade/vim-gitgutter'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
