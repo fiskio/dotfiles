@@ -7,6 +7,7 @@
     ~/.vim: vim/
     ~/.vimrc: vimrc
     ~/.bashrc: bashrc
+    ~/.ssh/rc: ssh.rc
 
 - shell:
    - [git submodule update --init --recursive, Installing/updating submodules]
