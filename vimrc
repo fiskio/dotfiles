@@ -112,3 +112,6 @@ set t_ut=
 
 "Show line numbers
 set number
+
+"Replace all, under cursor
+:nnoremap <leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
