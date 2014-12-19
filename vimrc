@@ -56,6 +56,9 @@ Plugin 'edkolev/tmuxline.vim'
 "GitGutter
 Plugin 'airblade/vim-gitgutter'
 
+"SuperTab
+Plugin 'ervandew/supertab'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
