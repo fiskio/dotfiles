@@ -53,6 +53,12 @@ Plugin 'scrooloose/nerdtree.git'
 "TmuxLine
 Plugin 'edkolev/tmuxline.vim'
 
+"GitGutter
+Plugin 'airblade/vim-gitgutter'
+
+"SuperTab
+Plugin 'ervandew/supertab'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -109,3 +115,6 @@ set t_ut=
 
 "Show line numbers
 set number
+
+"Replace all, under cursor
+:nnoremap <leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>

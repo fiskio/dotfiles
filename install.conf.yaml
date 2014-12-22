@@ -8,6 +8,7 @@
     ~/.vimrc: vimrc
     ~/.bashrc: bashrc
     ~/.config/xfce4/terminal/terminalrc: terminalrc
+    ~/.ssh/rc: ssh.rc
 
 - shell:
    - [git submodule update --init --recursive, Installing/updating submodules]
