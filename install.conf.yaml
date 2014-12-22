@@ -9,6 +9,8 @@
     ~/.bashrc: bashrc
     ~/.config/xfce4/terminal/terminalrc: terminalrc
     ~/.ssh/rc: ssh.rc
+    ~/.ssh/config: ssh.config
+    ~/.ssh/connections: ssh-connections
 
 - shell:
    - [git submodule update --init --recursive, Installing/updating submodules]
