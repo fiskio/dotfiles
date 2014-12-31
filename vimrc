@@ -27,7 +27,13 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'bling/vim-airline.git'
 
 "Lua-Support-2
-Plugin 'WolfgangMehner/lua-support.git'
+"Plugin 'WolfgangMehner/lua-support.git'
+
+"LuaInspect
+Plugin 'xolox/vim-lua-inspect'
+
+"Vim-Misc
+Plugin 'xolox/vim-misc'
 
 "Bad white-space
 Plugin 'bitc/vim-bad-whitespace.git'
