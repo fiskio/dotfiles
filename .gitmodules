@@ -9,4 +9,4 @@
 	url = https://github.com/powerline/fonts.git
 [submodule "zprezto"]
 	path = zprezto
-	url = https://github.com/sorin-ionescu/prezto.git
+	url = git@github.com:fiskio/prezto.git
