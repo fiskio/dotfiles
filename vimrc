@@ -27,7 +27,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'bling/vim-airline.git'
 
 "Lua-Support-2
-Plugin 'WolfgangMehner/lua-support.git'
+"Plugin 'WolfgangMehner/lua-support.git'
 
 "Bad white-space
 Plugin 'bitc/vim-bad-whitespace.git'
@@ -118,3 +118,8 @@ set number
 
 "Replace all, under cursor
 :nnoremap <leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+
+"Improved Searching
+set hlsearch
+set incsearch
+nnoremap <F3> :set hlsearch!<CR>
