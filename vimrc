@@ -30,6 +30,15 @@ Plugin 'bling/vim-airline.git'
 "Lua-Support-2
 "Plugin 'WolfgangMehner/lua-support.git'
 
+"LuaInspect
+"Plugin 'xolox/vim-lua-inspect'
+
+"Rainbow Parentheses Improved
+Plugin 'luochen1990/rainbow'
+
+"Vim-Misc
+Plugin 'xolox/vim-misc'
+
 "Bad white-space
 Plugin 'bitc/vim-bad-whitespace.git'
 
@@ -122,6 +131,30 @@ set number
 "Replace all, under cursor
 :nnoremap <leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
+"Rainbow Parentheses
+let g:rainbow_active = 1
+
+let g:rainbow_conf = {
+    \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+    \   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+    \   'operators': '_,_',
+    \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+    \   'separately': {
+    \       '*': {},
+    \       'tex': {
+    \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+    \       },
+    \       'vim': {
+    \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+    \       },
+    \       'lua': {
+    \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/\<\(function\|do\|then\)\>/ end=/\<\(end\|elseif\)\>/', 'start=/{/ end=/}/' ]
+    \       }
+    \   }
+    \}
+
+"Press C-r to replace the selected text in visual mode
+vnoremap <C-r> "hy:%s,<C-r>h,,gc<left><left><left>
 "Improved Searching
 "set hlsearch
 set incsearch
