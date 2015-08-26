@@ -1,0 +1,28 @@
+# EXPORTS
+export PATH=$PATH:~/android-sdk-linux/platform-tools
+export PATH=$PATH:~/android-sdk-linux/tools
+
+export ANDROID_NDK_TOOLCHAIN_ROOT=/home/fiskio/android-ndk-r9d/
+export PATH=$PATH:$ANDROID_NDK_TOOLCHAIN_ROOT
+
+export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/:/usr/lib/gcc-cross/arm-linux-gnueabihf/4.8.2
+export CMAKE_LIBRARY_PATH=$LD_LIBRARY_PATH
+
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export ANDROID_HOME=/home/fiskio/android-sdk-linux
+export PYTHONPATH=/usr/lib/python2.7/dist-packages
+
+#if which ruby >/dev/null && which gem >/dev/null; then
+#   PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+#fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+
+export TERM=screen-256color
+export PATH=/home/fiskio/torch-local/bin:$PATH
+export PATH=/home/fiskio/NN/TORCH/aws-ec2/aLM:$PATH
+export LD_LIBRARY_PATH="/lib:/usr/lib:/usr/local/lib"

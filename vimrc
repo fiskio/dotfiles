@@ -128,6 +128,7 @@ set number
 "Replace all, under cursor
 :nnoremap <leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
+<<<<<<< HEAD
 "Rainbow Parentheses
 let g:rainbow_active = 1
 
@@ -152,3 +153,9 @@ let g:rainbow_conf = {
 
 "Press C-r to replace the selected text in visual mode
 vnoremap <C-r> "hy:%s,<C-r>h,,gc<left><left><left>
+=======
+"Improved Searching
+set hlsearch
+set incsearch
+nnoremap <F3> :set hlsearch!<CR>
+>>>>>>> 2078904f14fee3840a24af8d2593f49d38686575
