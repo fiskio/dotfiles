@@ -1,4 +1,5 @@
 " VUNDLE
+set shell=/bin/bash
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -59,6 +60,9 @@ Plugin 'airblade/vim-gitgutter'
 "SuperTab
 Plugin 'ervandew/supertab'
 
+"Vim-Fish
+Plugin 'dag/vim-fish'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -101,7 +105,6 @@ set smarttab"
 set expandtab
 
 "Startify
-set viminfo='100,n$HOME/.vim/files/info/viminfo
 let g:startify_bookmarks = [ '~/.vimrc' ]
 let g:startify_custom_header =
     \ map(split(system('fortune -a | fmt -80 -s | cowsay -$(shuf -n 1 -e b d g p s t w y) -f $(shuf -n 1 -e $(cowsay -l | tail -n +2)) -n;'), '\n'), '"   ". v:val') + ['','']
@@ -120,6 +123,11 @@ set number
 :nnoremap <leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 "Improved Searching
-set hlsearch
+"set hlsearch
 set incsearch
 nnoremap <F3> :set hlsearch!<CR>
+
+"Speed up <Esc>
+set ttimeout
+set ttimeoutlen=25
+set notimeout
