@@ -155,6 +155,7 @@ let g:rainbow_conf = {
 
 "Press C-r to replace the selected text in visual mode
 vnoremap <C-r> "hy:%s,<C-r>h,,gc<left><left><left>
+
 "Improved Searching
 "set hlsearch
 set incsearch
