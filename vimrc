@@ -171,3 +171,8 @@ nnoremap <F3> :set hlsearch!<CR>
 set ttimeout
 set ttimeoutlen=25
 set notimeout
+
+"Reopen files at the last edit location
+if has("autocmd")
+   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
