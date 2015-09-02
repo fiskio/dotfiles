@@ -72,6 +72,12 @@ Plugin 'ervandew/supertab'
 "Vim-Fish
 Plugin 'dag/vim-fish'
 
+"Clojure 1
+Plugin 'guns/vim-clojure-static'
+
+"Clojure 2
+Plugin 'guns/vim-clojure-highlight'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
