@@ -6,11 +6,11 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+
+"" PLUGINS
 
 " CtrlP
 Plugin 'https://github.com/kien/ctrlp.vim.git'
@@ -20,9 +20,6 @@ Plugin 'rking/ag.vim'
 
 "ColorSchemes
 Plugin 'flazz/vim-colorschemes'
-
-"Thematic
-"Plugin 'reedes/vim-thematic.git'
 
 "Airline
 Plugin 'bling/vim-airline.git'
@@ -52,7 +49,7 @@ Plugin 'tpope/vim-fugitive.git'
 Plugin 'mhinz/vim-startify.git'
 
 "Syntastic
-Plugin 'scrooloose/syntastic.git'
+"Plugin 'scrooloose/syntastic.git'
 
 "VimTmuxNavigator
 Plugin 'christoomey/vim-tmux-navigator.git'
@@ -72,22 +69,27 @@ Plugin 'ervandew/supertab'
 "Vim-Fish
 Plugin 'dag/vim-fish'
 
+"EasyTags
+Plugin 'xolox/vim-easytags'
+
+"Markdown
+Plugin 'tpope/vim-markdown'
+
+"HardMode
+Plugin 'wikitopian/hardmode'
+
+"EasyMotion
+Plugin 'easymotion/vim-easymotion'
+
+"CamelCaseMotion
+Plugin 'bkad/CamelCaseMotion'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
 
-" Put your non-Plugin stuff after this line
+" CONFIG
+
 syntax enable
-set ts=3
 set laststatus=2
 
 "Set colorscheme
@@ -96,6 +98,7 @@ colorscheme Chasing_Logic
 "Airline config
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 "Strip all trailing whitespaces when saving
 "autocmd BufWritePre * :%s/\s\+$//e
@@ -108,7 +111,7 @@ set shiftwidth=3
 " a combination of spaces and tabs are used to simulate tab stops at a width
 " other than the (hard)tabstop
 set softtabstop=3
-" make "tab" insert indents instead of tabs at the beginning of a line
+" make tab insert indents instead of tabs at the beginning of a line
 set smarttab"
 " " always uses spaces instead of tab characters
 set expandtab
@@ -116,8 +119,9 @@ set expandtab
 "Startify
 let g:startify_bookmarks = [ '~/.vimrc' ]
 let g:startify_custom_header =
-    \ map(split(system('fortune -a | fmt -80 -s | cowsay -$(shuf -n 1 -e b d g p s t w y) -f $(shuf -n 1 -e $(cowsay -l | tail -n +2)) -n;'), '\n'), '"   ". v:val') + ['','']
-autocmd User Startified setlocal buftype=
+         \ map(split(system('fortune -s -o | fmt -80 -s | cowsay -$(gshuf -n 1 -e b d g p s t w y) -f $(gshuf -n 1 -e $(cowsay -l | tail -n +2)) -n;'), '\n'), '"   ". v:val') + ['','']
+"autocmd User Startified setlocal buftype=
+108
 
 "CtrlP shortcut
 map <leader>y :CtrlPBuffer<cr>s
@@ -164,3 +168,48 @@ nnoremap <F3> :set hlsearch!<CR>
 set ttimeout
 set ttimeoutlen=25
 set notimeout
+
+"Move aross buffers
+:nnoremap <C-n> :bnext<CR>
+:nnoremap <C-p> :bprevious<CR>
+:set autowrite
+
+" Persist undo
+set undofile
+"maximum number of changes that can be undone
+set undolevels=9999
+"maximum number lines to save for undo on a buffer reload
+set undoreload=9999
+" set location
+set undodir=$HOME/.vimundo//
+
+"HardMode settings
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Bi-directional find motion
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+"nmap s <Plug>(easymotion-s)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-s2)
+
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
+" avoid creating .swp files
+set noswapfile
+" avoid adding comments in new lines
+set formatoptions-=or
+
+" map Ctrl-S to page down
+" works for colmak
+:nnoremap <C-s> <C-b>
