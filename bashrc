@@ -162,3 +162,8 @@ export TERM=screen-256color
 export PATH=/home/fiskio/torch-local/bin:$PATH
 export PATH=/home/fiskio/NN/TORCH/aws-ec2/aLM:$PATH
 export LD_LIBRARY_PATH="/lib:/usr/lib:/usr/local/lib"
+
+export PATH=~/.bin:$PATH
+
+ulimit -c unlimited
+

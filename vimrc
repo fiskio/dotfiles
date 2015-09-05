@@ -84,6 +84,12 @@ Plugin 'easymotion/vim-easymotion'
 "CamelCaseMotion
 Plugin 'bkad/CamelCaseMotion'
 
+"Clojure 1
+Plugin 'guns/vim-clojure-static'
+
+"Clojure 2
+Plugin 'guns/vim-clojure-highlight'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -159,6 +165,7 @@ let g:rainbow_conf = {
 
 "Press C-r to replace the selected text in visual mode
 vnoremap <C-r> "hy:%s,<C-r>h,,gc<left><left><left>
+
 "Improved Searching
 "set hlsearch
 set incsearch
@@ -213,3 +220,7 @@ set formatoptions-=or
 " map Ctrl-S to page down
 " works for colmak
 :nnoremap <C-s> <C-b>
+"Reopen files at the last edit location
+if has("autocmd")
+   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
