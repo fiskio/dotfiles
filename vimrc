@@ -90,6 +90,9 @@ Plugin 'guns/vim-clojure-static'
 "Clojure 2
 Plugin 'guns/vim-clojure-highlight'
 
+"Gradle
+Plugin 'tfnico/vim-gradle'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
