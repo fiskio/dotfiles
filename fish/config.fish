@@ -21,6 +21,11 @@ set -gx CXX  /usr/local/bin/g++-4.9
 alias zc 'gunzip -c -d'
 alias ll 'ls -lart'
 
+# if gshuf we are in OSX -> alias
+if type -f gshuf >/dev/null ^/dev/null
+   alias shuf gshuf
+end
+
 # GPG
 set -gx GPG_TTY (tty)
 cat ~/.gpg-agent-info | sed 's/=/ /' | while read key value
@@ -32,5 +37,5 @@ end
 
 # Greeting
 function fish_greeting
-   fortune -s -o | fmt -80 -s | cowsay -(gshuf -n 1 -e b d g p s t w y) -f (gshuf -n 1 -e (cowsay -l | tail -n +2 | tr ' ' '\n')) -n
+   fortune -s -o | fmt -80 -s | cowsay -(shuf -n 1 -e b d g p s t w y) -f (shuf -n 1 -e (cowsay -l | tail -n +2 | tr ' ' '\n')) -n
 end
