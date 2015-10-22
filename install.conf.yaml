@@ -20,6 +20,7 @@
     ~/.zprofile: zprezto/runcoms/zprofile
     ~/.zshenv: zprezto/runcoms/zshenv
     ~/.zshrc: zprezto/runcoms/zshrc
+    ~/.config/fish: fish
 
 - shell:
    - [git submodule update --init --recursive, Installing/updating submodules]
