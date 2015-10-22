@@ -76,7 +76,7 @@ Plugin 'xolox/vim-easytags'
 Plugin 'tpope/vim-markdown'
 
 "HardMode
-Plugin 'wikitopian/hardmode'
+"Plugin 'wikitopian/hardmode'
 
 "EasyMotion
 Plugin 'easymotion/vim-easymotion'
