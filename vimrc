@@ -113,17 +113,8 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 "autocmd BufWritePre * :%s/\s\+$//e
 
 " Fix Tabs
-" size of a hard tabstop
-set tabstop=3
-" size of an "indent"
-set shiftwidth=3
-" a combination of spaces and tabs are used to simulate tab stops at a width
-" other than the (hard)tabstop
-set softtabstop=3
-" make tab insert indents instead of tabs at the beginning of a line
-set smarttab"
-" " always uses spaces instead of tab characters
-set expandtab
+autocmd Filetype lua    setlocal ts=3 sw=3 expandtab
+autocmd Filetype python setlocal ts=4 sw=4 expandtab
 
 "Startify
 let g:startify_bookmarks = [ '~/.vimrc' ]
