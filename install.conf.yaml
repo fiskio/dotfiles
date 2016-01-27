@@ -25,3 +25,4 @@
 - shell:
    - [git submodule update --init --recursive, Installing/updating submodules]
    - [fonts/install.sh, Installing PowerLine fonts]
+   - [git-status-tree/bin/install, Installing git-status-tree]

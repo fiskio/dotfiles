@@ -10,3 +10,6 @@
 [submodule "zprezto"]
 	path = zprezto
 	url = git@github.com:fiskio/prezto.git
+[submodule "git-status-tree"]
+	path = git-status-tree
+	url = https://github.com/knugie/git-status-tree.git
