@@ -5,6 +5,7 @@ set -gx PATH $PATH $HOME/wmt15/mosesdecoder/scripts/tokenizer
 set -gx PATH $PATH $HOME/Library/Android/sdk/platform-tools
 set -gx PATH $PATH $HOME/Library/Android/sdk/tools
 set -gx PATH $PATH $HOME/Documents/android-ndk-r10e
+set -gx PATH $PATH $HOME/.gem/ruby/2.0.0/bin/
 
 # LUA
 set -gx LUA_PATH $HOME/?/init.lua $HOME/?.lua $LUA_PATH
@@ -20,6 +21,10 @@ set -gx CXX  /usr/local/bin/g++-4.9
 # Aliases
 alias zc 'gunzip -c -d'
 alias ll 'ls -lart'
+#alias gs 'git status'
+alias ga 'git add'
+alias gc 'git commit -m '
+
 
 # if gshuf we are in OSX -> alias
 if type -f gshuf >/dev/null ^/dev/null
@@ -39,3 +44,14 @@ end
 function fish_greeting
    fortune -s -o | fmt -80 -s | cowsay -(shuf -n 1 -e b d g p s t w y) -f (shuf -n 1 -e (cowsay -l | tail -n +2 | tr ' ' '\n')) -n
 end
+
+function ssh_aws
+   ssh -A -tt -v fiskio@10.99.0.54 ssh -A -tt -v marco@54.72.251.218 ssh -A -tt -v ubuntu@$argv
+   #ssh -A -tt -v marco@54.72.251.218 ssh -A -tt -v ubuntu@$argv
+end
+# Docker
+function start_docker
+   docker-machine start default
+   eval (docker-machine env default)
+end
+
