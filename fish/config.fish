@@ -42,16 +42,14 @@ end
 
 # Greeting
 function fish_greeting
-   fortune -s -o | fmt -80 -s | cowsay -(shuf -n 1 -e b d g p s t w y) -f (shuf -n 1 -e (cowsay -l | tail -n +2 | tr ' ' '\n')) -n
+   fortune -s  | fmt -80 -s | cowsay -(shuf -n 1 -e b d g p s t w y) -f (shuf -n 1 -e (cowsay -l | tail -n +2 | tr ' ' '\n')) -n
 end
 
 function ssh_aws
    ssh -A -tt -v fiskio@10.99.0.54 ssh -A -tt -v marco@54.72.251.218 ssh -A -tt -v ubuntu@$argv
    #ssh -A -tt -v marco@54.72.251.218 ssh -A -tt -v ubuntu@$argv
-end
-# Docker
-function start_docker
-   docker-machine start default
-   eval (docker-machine env default)
-end
 
+# make CapsLock behave like Ctrl:
+setxkbmap -option ctrl:nocaps
+# make short-pressed Ctrl behave like Escape:
+xcape -e 'Control_L=Escape'
