@@ -12,8 +12,8 @@ set -gx LUA_PATH $HOME/?/init.lua $HOME/?.lua $LUA_PATH
 set -gx LUA_CPATH $HOME/oxnn/?.so $HOME/?.so $LUA_CPATH
 
 # GCC
-set -gx CC   /usr/local/bin/gcc-4.9
-set -gx CXX  /usr/local/bin/g++-4.9
+#set -gx CC   /usr/local/bin/gcc-4.9
+#set -gx CXX  /usr/local/bin/g++-4.9
 
 # VIM
 #fish_vi_mode
@@ -48,7 +48,7 @@ end
 function ssh_aws
    ssh -A -tt -v fiskio@10.99.0.54 ssh -A -tt -v marco@54.72.251.218 ssh -A -tt -v ubuntu@$argv
    #ssh -A -tt -v marco@54.72.251.218 ssh -A -tt -v ubuntu@$argv
-
+end
 # make CapsLock behave like Ctrl:
 setxkbmap -option ctrl:nocaps
 # make short-pressed Ctrl behave like Escape:
